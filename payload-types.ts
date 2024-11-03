@@ -83,7 +83,6 @@ export interface Course {
         blockType: 'item-block';
       }[]
     | null;
-  directItems?: (number | Item)[] | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -191,7 +190,6 @@ export interface CoursesSelect<T extends boolean = true> {
               blockName?: T;
             };
       };
-  directItems?: T;
   updatedAt?: T;
   createdAt?: T;
 }
