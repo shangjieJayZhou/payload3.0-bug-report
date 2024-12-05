@@ -18,7 +18,8 @@ export interface Config {
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
   };
-  collectionsSelect?: {
+  collectionsJoins: {};
+  collectionsSelect: {
     items: ItemsSelect<false> | ItemsSelect<true>;
     courses: CoursesSelect<false> | CoursesSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
@@ -30,14 +31,14 @@ export interface Config {
     defaultIDType: number;
   };
   globals: {};
-  globalsSelect?: {};
+  globalsSelect: {};
   locale: null;
   user: User & {
     collection: 'users';
   };
-  jobs?: {
+  jobs: {
     tasks: unknown;
-    workflows?: unknown;
+    workflows: unknown;
   };
 }
 export interface UserAuthOperations {
